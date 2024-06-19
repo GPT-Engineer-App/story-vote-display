@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Switch } from "@/components/ui/switch";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = React.useState(false);
@@ -16,12 +18,25 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
-      <div className="flex space-x-4">
-        <Link to="/" className="hover:underline">Home</Link>
-        <Link to="/top-stories" className="hover:underline">Top Stories</Link>
-        <Link to="/about" className="hover:underline">About</Link>
-        <Link to="/maps" className="hover:underline">Maps</Link>
-      </div>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline">Navigate</Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem asChild>
+            <Link to="/">Home</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link to="/top-stories">Top Stories</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link to="/about">About</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link to="/maps">Maps</Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
       <div className="flex items-center space-x-4">
         <Switch checked={darkMode} onCheckedChange={setDarkMode} />
         <Avatar>
