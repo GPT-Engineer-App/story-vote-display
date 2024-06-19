@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
+    <nav className="bg-purple-600 p-4 text-white flex justify-between items-center">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">Navigate</Button>
