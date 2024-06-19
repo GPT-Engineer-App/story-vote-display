@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"; // Import Popover components
 
 const Index = () => {
   const [stories, setStories] = useState([]);
@@ -48,9 +49,16 @@ const Index = () => {
               <CardDescription>{story.score} upvotes</CardDescription>
             </CardHeader>
             <CardContent>
-              <a href={story.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
-                Read more
-              </a>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <a href={story.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+                    Read more
+                  </a>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <p>{story.url}</p>
+                </PopoverContent>
+              </Popover>
             </CardContent>
           </Card>
         ))}
