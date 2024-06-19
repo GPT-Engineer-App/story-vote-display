@@ -8,6 +8,7 @@ import TermsOfService from "./pages/TermsOfService.jsx";
 import Maps from "./pages/Maps.jsx"; // Import the Maps component
 import Auth from "./pages/Auth.jsx"; // Import the Auth component
 import Notes from "./pages/Notes.jsx"; // Import the Notes component
+import Tickets from "./pages/Tickets.jsx"; // Import the Tickets component
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route path="/maps" element={<Maps />} /> {/* Add route for Maps page */}
       <Route path="/notes" element={<Notes />} /> {/* Add route for Notes page */}
+      <Route path="/tickets" element={<Tickets />} /> {/* Add route for Tickets page */}
       </Routes>
       <Footer /> {/* Add the Footer component */}
     </Router>
