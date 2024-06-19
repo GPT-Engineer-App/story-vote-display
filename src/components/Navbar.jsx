@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch"; // Import Switch component
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = React.useState(false);
@@ -42,6 +43,7 @@ const Navbar = () => {
           <AvatarImage src="https://github.com/Yuyz0112.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
+        <Switch checked={darkMode} onCheckedChange={setDarkMode} /> {/* Add Switch component */}
       </div>
     </nav>
   );
