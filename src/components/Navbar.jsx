@@ -5,10 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 
-
 const Navbar = () => {
-  
-
   return (
     <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
       <DropdownMenu>
@@ -28,6 +25,9 @@ const Navbar = () => {
           <DropdownMenuItem asChild>
             <Link to="/maps">Maps</Link>
           </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link to="/notes">Notes</Link>
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="flex items-center space-x-4">
@@ -35,7 +35,6 @@ const Navbar = () => {
           <AvatarImage src="https://github.com/Yuyz0112.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        
       </div>
     </nav>
   );
