@@ -18,7 +18,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="bg-gray-800 p-4 text-white flex justify-between items-center">
+    <nav className="bg-gray-900 p-4 text-white flex justify-between items-center">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">Navigate</Button>
