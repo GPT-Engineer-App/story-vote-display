@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";
 
 const Index = () => {
   const [stories, setStories] = useState([]);
@@ -44,7 +45,16 @@ const Index = () => {
         {filteredStories.map(story => (
           <Card key={story.id} className="mb-4">
             <CardHeader>
-              <CardTitle>{story.title}</CardTitle>
+              <Popover>
+                <PopoverTrigger asChild>
+                  <CardTitle>{story.title}</CardTitle>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <a href={story.url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+                    {story.url}
+                  </a>
+                </PopoverContent>
+              </Popover>
               <CardDescription>{story.score} upvotes</CardDescription>
             </CardHeader>
             <CardContent>
