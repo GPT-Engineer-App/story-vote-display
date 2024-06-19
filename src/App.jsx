@@ -6,6 +6,7 @@ import Contact from "./pages/Contact.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
 import Maps from "./pages/Maps.jsx"; // Import the Maps component
+import Auth from "./pages/Auth.jsx"; // Import the Auth component
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/top-stories" element={<Index />} />
         <Route path="/about" element={<div>About Page</div>} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/auth" element={<Auth />} /> {/* Add route for Auth page */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route path="/maps" element={<Maps />} /> {/* Add route for Maps page */}
