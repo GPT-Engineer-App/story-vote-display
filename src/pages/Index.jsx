@@ -47,7 +47,7 @@ const Index = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center">
+    <div className="h-screen w-screen flex flex-col items-center justify-center overflow-auto max-h-screen">
       <Input 
         placeholder="Search stories..." 
         value={searchTerm} 
