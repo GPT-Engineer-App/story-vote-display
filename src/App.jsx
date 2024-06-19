@@ -5,6 +5,7 @@ import Footer from "./components/Footer.jsx"; // Import the Footer component
 import Contact from "./pages/Contact.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
+import Maps from "./pages/Maps.jsx"; // Import the Maps component
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+      <Route path="/maps" element={<Maps />} /> {/* Add route for Maps page */}
       </Routes>
       <Footer /> {/* Add the Footer component */}
     </Router>

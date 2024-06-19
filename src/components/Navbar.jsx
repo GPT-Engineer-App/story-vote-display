@@ -19,6 +19,7 @@ const Navbar = () => {
         <Link to="/" className="hover:underline">Home</Link>
         <Link to="/top-stories" className="hover:underline">Top Stories</Link>
         <Link to="/about" className="hover:underline">About</Link>
+        <Link to="/maps" className="hover:underline">Maps</Link>
       </div>
       <Switch checked={darkMode} onCheckedChange={setDarkMode} />
     </nav>
