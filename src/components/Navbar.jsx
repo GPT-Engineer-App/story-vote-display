@@ -43,7 +43,7 @@ const Navbar = () => {
           <AvatarImage src="https://github.com/Yuyz0112.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <Switch checked={darkMode} onCheckedChange={setDarkMode} /> {/* Add Switch component */}
+        <Switch checked={darkMode} onCheckedChange={setDarkMode} /> {/* Ensure only one Switch component */}
       </div>
     </nav>
   );
