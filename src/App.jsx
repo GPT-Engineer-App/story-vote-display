@@ -7,6 +7,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import TermsOfService from "./pages/TermsOfService.jsx";
 import Maps from "./pages/Maps.jsx"; // Import the Maps component
 import Auth from "./pages/Auth.jsx"; // Import the Auth component
+import Notes from "./pages/Notes.jsx"; // Import the Notes component
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route path="/maps" element={<Maps />} /> {/* Add route for Maps page */}
+      <Route path="/notes" element={<Notes />} /> {/* Add route for Notes page */}
       </Routes>
       <Footer /> {/* Add the Footer component */}
     </Router>
