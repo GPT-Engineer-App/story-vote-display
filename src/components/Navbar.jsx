@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Switch } from "@/components/ui/switch";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
@@ -38,7 +38,6 @@ const Navbar = () => {
         </DropdownMenuContent>
       </DropdownMenu>
       <div className="flex items-center space-x-4">
-        <Switch checked={darkMode} onCheckedChange={setDarkMode} />
         <Avatar>
           <AvatarImage src="https://github.com/Yuyz0112.png" />
           <AvatarFallback>CN</AvatarFallback>
