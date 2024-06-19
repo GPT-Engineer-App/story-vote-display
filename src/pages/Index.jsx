@@ -8,7 +8,7 @@ import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover
 const Index = () => {
   const [stories, setStories] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [darkMode, setDarkMode] = useState(false);
+  
 
   useEffect(() => {
     const fetchTopStories = async () => {
@@ -31,10 +31,7 @@ const Index = () => {
   );
 
   return (
-    <div className={`h-screen w-screen flex flex-col items-center justify-center ${darkMode ? 'dark' : ''}`}>
-      <div className="absolute top-4 right-4">
-        <Switch checked={darkMode} onCheckedChange={setDarkMode} />
-      </div>
+    <div className="h-screen w-screen flex flex-col items-center justify-center">
       <Input 
         placeholder="Search stories..." 
         value={searchTerm} 
