@@ -38,7 +38,7 @@ const Index = () => {
         onChange={e => setSearchTerm(e.target.value)} 
         className="mb-4 w-3/4 max-w-md"
       />
-      <div className="w-3/4 max-w-md">
+      <div className="w-full max-w-4xl">
         {filteredStories.map(story => (
           <Card key={story.id} className="mb-4">
             <CardHeader>
