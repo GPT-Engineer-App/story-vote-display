@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Switch } from "@/components/ui/switch";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = React.useState(false);
@@ -21,7 +22,13 @@ const Navbar = () => {
         <Link to="/about" className="hover:underline">About</Link>
         <Link to="/maps" className="hover:underline">Maps</Link>
       </div>
-      <Switch checked={darkMode} onCheckedChange={setDarkMode} />
+      <div className="flex items-center space-x-4">
+        <Switch checked={darkMode} onCheckedChange={setDarkMode} />
+        <Avatar>
+          <AvatarImage src="https://github.com/Yuyz0112.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+      </div>
     </nav>
   );
 };
